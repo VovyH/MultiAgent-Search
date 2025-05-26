@@ -1,7 +1,7 @@
 # MultiAgent-Search：基于多智能体识别图像位置
 
 ## 0.鸣谢
-感谢 [**上海人工智能实验室书生浦语大模型**](https://internlm.openxlab.org.cn/) 以及 [**熊玉洁导师**](https://xiongyujie.cn/introduce.html) 的支持，感谢实训营提供的赞助和机会。
+感谢 [**上海人工智能实验室书生浦语大模型**](https://internlm.openxlab.org.cn/) 以及 [**熊玉洁导师**](https://xiongyujie.cn) 的支持，感谢实训营提供的赞助和机会。
 <div align="center">
      <img src="https://github.com/user-attachments/assets/ef94a720-b59a-4dae-b915-8a78be6d2680" alt="Search-SongJiang" />
 </div>
