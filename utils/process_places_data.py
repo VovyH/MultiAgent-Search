@@ -12,7 +12,8 @@ def extract_songjiang_places(text):
 
 
 # 示例文本
-text = '''1. 上海工程技术大学松江校区
+text = '''
+1. 上海工程技术大学松江校区
 2. 东华大学
 3. 华东政法大学
 
