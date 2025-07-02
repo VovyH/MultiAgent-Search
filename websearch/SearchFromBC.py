@@ -6,7 +6,6 @@ from game.utils.process_web_model import extract_places_byModel
 # 从环境变量获取API密钥，如果不存在则使用空字符串作为默认值
 BOCHA_API_KEY = os.environ.get('BOCHA_API_KEY', '')
 
-
 # 1.定义博查 Web 搜索的工具函数
 def bocha_web_search(query, count=8):
     url = 'https://api.bochaai.com/v1/ai-search'  # 确保 API 端点正确
