@@ -3,7 +3,7 @@ import os
 from utils.process_map_data import extract_poi_names_and_photos
 
 """
- 1.调用高德地图API的文本搜索接口，获取指定地点信息。
+ 调用高德地图API的文本搜索接口，获取指定地点信息。
 
  参数:
      keywords (str): 查询的关键字，例如 "北京大学"。
@@ -45,7 +45,6 @@ def amap_place_search(keywords, city=None, types=None, citylimit=False, offset=2
         return response.json()  # 返回JSON格式的响应
     else:
         return {"error": f"请求失败，状态码: {response.status_code}"}
-
 
 # 示例使用
 if __name__ == "__main__":
