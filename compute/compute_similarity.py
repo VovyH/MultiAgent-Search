@@ -2,12 +2,6 @@
 compute_similarity.py - 计算文本相似度模块
 提供基于TF-IDF和向量嵌入的文本相似度计算功能
 """
-import sys
-import os
-
-# 添加项目根目录到系统路径
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
