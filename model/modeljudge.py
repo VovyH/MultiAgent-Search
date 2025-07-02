@@ -9,7 +9,6 @@ DASHSCOPE_API_KEY = os.environ.get("DASHSCOPE_API_KEY", "")
 # 使用环境变量中的API密钥
 llm = Tongyi(dashscope_api_key=DASHSCOPE_API_KEY, model="qwen-plus")
 
-# 3. 设置template
 template = """你现在扮演的是一名地址特征比较工程师，请利用传入的图片主特征{maintraits}，与文件内容{filecontents}中的Small Place的Traits进行比较，分析其原因，返回特征最接近的Small Place。
 
 要求：
@@ -25,20 +24,16 @@ template = """你现在扮演的是一名地址特征比较工程师，请利用
 prompt = PromptTemplate.from_template(template)
 
 
-# 1.根据主特征和候选特征进行judge
+# 根据主特征和候选特征进行judge
 def judge_byModel(maintraits, file_path):
-    # 自动检测文件编码
     with open(file_path, 'rb') as f:
-        raw_data = f.read()  # 读取文件的二进制内容
-        result = chardet.detect(raw_data)  # 检测编码
-        encoding = result['encoding']  # 获取检测到的编码
-
+        raw_data = f.read()  
+        result = chardet.detect(raw_data)  
+        encoding = result['encoding']  
     # 使用检测到的编码读取文件内容
     with open(file_path, 'r', encoding=encoding) as f:
-        filecontents = f.read()  # 读取整个文件内容
-
+        filecontents = f.read()  
     chain_input = {"maintraits": maintraits, "filecontents": filecontents}
-
     chain = prompt | llm
     judge_content = chain.invoke(chain_input)
     return judge_content
