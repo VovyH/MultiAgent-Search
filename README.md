@@ -19,7 +19,7 @@
    - `DASHSCOPE_API_KEY`：通义千问VL大模型API密钥
    - `BOCHA_API_KEY`：博查搜索API密钥
    - `AMAP_API_KEY`：高德地图API密钥
-   - `SILICON_FLOW_API_KEY`：Silicon Flow API密钥（用于向量嵌入）
+   - `SILICON_FLOW_API_KEY`：Silicon Flow API秘钥
 2. 安装依赖：`pip install -r requirements.txt`
 3. 运行服务：`python center/center.py`
 
