@@ -5,8 +5,6 @@ import os
 """
 1.将相似度最高的信息存储到一个文件当中
 """
-
-
 def write_top_similarities_to_file(top_3_similarities, save_path):
     """
     将前三个相似度最高的地标信息及其特征写入指定路径的临时文件中。

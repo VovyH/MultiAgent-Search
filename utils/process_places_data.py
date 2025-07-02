@@ -1,6 +1,5 @@
 import re
 
-
 def extract_songjiang_places(text):
     # 定义正则表达式来匹配序号后面的内容，直到遇到空格为止
     pattern = r'\d+\.\s*([^\s]+)'  # 匹配格式如 '1. 内容'

@@ -2,10 +2,10 @@ def extract_poi_names_and_photos(response):
     """
     提取API响应中的POI名称和对应的照片信息，并收集所有POI的照片到一个大集合中。
 
-    参数:
+    args:
         response (dict): 高德API返回的响应数据
 
-    返回:
+    return:
         names_set (set): 所有POI名称的集合
         name_photos_dict (dict): 每个POI名称对应的照片集合
         all_photos_set (set): 所有POI的照片的大集合

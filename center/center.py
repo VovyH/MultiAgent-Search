@@ -1,3 +1,8 @@
+"""
+center.py - MultiAgent-Search 项目的核心服务
+处理图像上传和位置识别逻辑
+"""
+
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 from datetime import datetime
@@ -25,12 +30,17 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # 环境配置
 app.config['UPLOAD_FOLDER'] = 'uploads'  # 确保这个文件夹存在或在代码中创建它
 app.config['UPLOAD_FOLDER'] = 'image_temp'
-# API密钥配置
-os.environ["DASHSCOPE_API_KEY"] = "xxxxxxxxxxxxxxxx"
+# API密钥配置 - 从环境变量获取
+# 不需要在这里设置环境变量，应该在启动应用前设置
+# os.environ["DASHSCOPE_API_KEY"] = os.environ.get("DASHSCOPE_API_KEY", "")
 save_path = '..//tempfile//'
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+# 确保临时文件目录存在
+if not os.path.exists(save_path):
+    os.makedirs(save_path, exist_ok=True)
 
 
 # 上传图像和问题得到响应

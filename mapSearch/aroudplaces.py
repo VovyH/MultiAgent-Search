@@ -1,4 +1,5 @@
 import requests
+import os
 from utils.process_map_data import extract_poi_names_and_photos
 
 """
@@ -21,11 +22,14 @@ def amap_place_search(keywords, city=None, types=None, citylimit=False, offset=2
 
     base_url = "https://restapi.amap.com/v3/place/text"
 
+    # 从环境变量获取API密钥，如果不存在则使用空字符串作为默认值
+    AMAP_API_KEY = os.environ.get('AMAP_API_KEY', '')
+
     # 请求参数
     params = {
         "keywords": keywords,
         "city": city,
-        "key": "", # 高德key(PAI服务)
+        "key": AMAP_API_KEY, # 从环境变量获取高德API密钥
         "types": types,
         "citylimit": "true" if citylimit else "false",
         "offset": offset,
