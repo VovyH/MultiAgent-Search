@@ -30,9 +30,6 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 # 环境配置
 app.config['UPLOAD_FOLDER'] = 'uploads'  # 确保这个文件夹存在或在代码中创建它
 app.config['UPLOAD_FOLDER'] = 'image_temp'
-# API密钥配置 - 从环境变量获取
-# 不需要在这里设置环境变量，应该在启动应用前设置
-# os.environ["DASHSCOPE_API_KEY"] = os.environ.get("DASHSCOPE_API_KEY", "")
 save_path = '..//tempfile//'
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
