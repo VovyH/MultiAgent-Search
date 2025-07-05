@@ -1,6 +1,5 @@
 import re
 
-
 def extract_songjiang_places(text):
     # 定义正则表达式来匹配序号后面的内容，直到遇到空格为止
     pattern = r'\d+\.\s*([^\s]+)'  # 匹配格式如 '1. 内容'
@@ -13,7 +12,8 @@ def extract_songjiang_places(text):
 
 
 # 示例文本
-text = '''1. 上海工程技术大学松江校区
+text = '''
+1. 上海工程技术大学松江校区
 2. 东华大学
 3. 华东政法大学
 

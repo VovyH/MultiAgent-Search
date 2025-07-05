@@ -15,11 +15,14 @@
 </div>
 
 ## 快速运行：
-1.  Center 文件下的 `DASHSCOPE_API_KEY`
-2.  WebSearch 文件下的 `BOCHA_API_KEY`
-3.  mapSearch 文件夹下的高德地图 Key 
-4.  model文件夹下两个文件下的 key 
-5.  然后直接运行 center.py 即可（建议debug，所耗费 Token 较多）
+1. 创建 `.env` 文件（参考 `.env.example`）并配置以下 API 密钥：
+   - `DASHSCOPE_API_KEY`：通义千问VL大模型API密钥
+   - `BOCHA_API_KEY`：博查搜索API密钥
+   - `AMAP_API_KEY`：高德地图API密钥
+   - `SILICON_FLOW_API_KEY`：Silicon Flow API秘钥
+2. 安装依赖：`pip install -r requirements.txt`
+3. 运行服务：`python center/center.py`
+
 ## 2.介绍
 **MultiAgent-Search**是基于InternLM书生浦语大模型实现的多智能体项目，在图寻地址方面为全球首创，旨在利用多**Agent**识别上海市松江大学城图像，识别过程很好地模拟了人类思考图像位置的过程，以进行图像寻址，如：上海工程技术大学松江校区-图书馆等，在图像寻址功能上超越了**ChatGPT4o**与**文心一言3.5**等大模型。
 
@@ -48,7 +51,6 @@
 
 ## 5.最终效果
 ![903a6230f0c46df636a4a3f3cb1541e](https://github.com/user-attachments/assets/cd43be64-b005-48cb-b07e-31cef6574eff)
-
 
 ## 6. 引用
 
