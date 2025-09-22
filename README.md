@@ -1,5 +1,10 @@
 # MultiAgent-Search：基于多智能体识别图像位置
 
+![GitHub License](https://img.shields.io/github/license/VovyH/MultiAgent-Search?tab=MIT-1-ov-file)
+![GitHub stars](https://img.shields.io/github/stars/VovyH/MultiAgent-Search)
+![PyPI - License](https://img.shields.io/pypi/l/FreeKnowledge-AI?color=purple)
+![书生·铺语大模型](https://img.shields.io/badge/书生·浦语大模型-蓝色?color=blue)
+
 ## 0.鸣谢
 感谢 [**上海人工智能实验室书生浦语大模型**](https://internlm.openxlab.org.cn/) 的支持，感谢实训营提供的赞助和机会。
 <div align="center">
